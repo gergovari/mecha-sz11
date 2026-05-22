@@ -1,0 +1,34 @@
+\section{b) A tehetetlenségre ható nyomaték ($M_{J1}$) vizsgálata}
+
+A feladat az $i_g$ áramgerjesztés és a behajtó tengely $J_1$ tehetetlenségére ható nyomaték ($M_{J1}$) közötti átviteli függvény meghatározása.
+
+Newton II. axiómája (forgómozgásra) alapján a $J_1$ tehetetlenségi nyomatékú tárcsát gyorsító nyomaték arányos a szöggyorsulással. Laplace-térben (nulla kezdeti feltételekkel) ez a szögsebesség deriváltjával fejezhető ki:
+\begin{equation}
+	M_{J1}(s) = J_1 \cdot s \Omega_1(s)
+\end{equation}
+
+Az a) részben kapott eredmények alapján az $\Omega_1$ és $\Omega_2$ közötti kapcsolat:
+\begin{equation}
+	\Omega_1(s) = \frac{r_2}{r_1} \Omega_2(s)
+\end{equation}
+
+Helyettesítsük be az $\Omega_2(s)$-re kapott kifejezést:
+\begin{equation}
+	\Omega_1(s) = \frac{r_2}{r_1} \left( I_g(s) \frac{\frac{r_2}{r_1} k_m}{\left[ J_2 + J_1 \left(\frac{r_2}{r_1}\right)^2 \right] s + \left[ B_2 + B_1 \left(\frac{r_2}{r_1}\right)^2 \right]} \right)
+\end{equation}
+
+Ezt beírva az $M_{J1}(s)$ egyenletébe:
+\begin{equation}
+	M_{J1}(s) = J_1 s \left( \left(\frac{r_2}{r_1}\right)^2 \frac{k_m}{\left[ J_2 + J_1 \left(\frac{r_2}{r_1}\right)^2 \right] s + \left[ B_2 + B_1 \left(\frac{r_2}{r_1}\right)^2 \right]} \right) I_g(s)
+\end{equation}
+
+Az átviteli függvény ($W_b(s) = \frac{M_{J1}(s)}{I_g(s)}$):
+\begin{equation}
+	W_b(s) = \frac{J_1 \left(\frac{r_2}{r_1}\right)^2 k_m \cdot s}{\left[ J_2 + J_1 \left(\frac{r_2}{r_1}\right)^2 \right] s + \left[ B_2 + B_1 \left(\frac{r_2}{r_1}\right)^2 \right]}
+\end{equation}
+Megjegyzés: Ha az áttételt a behajtó oldalra redukálva írjuk fel (számlálót és nevezőt osztva $\left(\frac{r_2}{r_1}\right)^2$-tel), az átviteli függvény egyszerűbb formát is ölthet:
+\begin{equation}
+	W_b(s) = \frac{J_1 k_m \cdot s}{\left[ J_1 + J_2 \left(\frac{r_1}{r_2}\right)^2 \right] s + \left[ B_1 + B_2 \left(\frac{r_1}{r_2}\right)^2 \right]}
+\end{equation}
+
+Ez az átviteli függvény egy \textbf{reális differenciáló (DT1)} tag. Típusát tekintve ez felbontható egy ideális differenciáló (D) tag (amely a számlálóban lévő $s$ operátorból adódik) és egy arányos egytárolós (PT1) tag (a nevező miatt) soros kapcsolására.
